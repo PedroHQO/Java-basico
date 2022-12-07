@@ -1,0 +1,207 @@
+Padrão do arquivo JAVA: Código dentro de {}
+
+Minha classe deve está copativél com meu arquivo.
+
+As classes quase sempre começaram com: public class MinhaClass(nome da classe, calculadora, manual...) {}
+
+Criar um projeto no VsCode: Ctrl + Shift + P -> Java:Create Ja..
+Seleciona o Local com seus projetos, dê um nome ao seu projeto
+
+Todo o nosso código(classe) fica no arquivo src
+
+Todas as classes as primeiras letras das palavras devem ser Maiúsculas, o título
+
+Classe executavél é aquela capaz de agir de forma independente, ou responsável por inicializar minha aplicação
+
+Como imprimir algo com o método main:
+main -> determina que sua classe é a principal e que será apartir 
+dela o começço.
+
+public class MinhaClasse {
+  
+public static void main (String [] args) {
+    
+    System.out.print ( "Olá Pedro, seja bem-vindo");
+    
+}
+
+
+}
+
+
+Nunca devemos mudar um aspecto de variavél 
+String BR = "Brasil";
+BR = "Brazil"; não pode mudar o aspecto
+
+Caso você coloque uma variavél toda MAIÚSCULA e do tipo final. então presumimos que a mesma não pode sofrer alteração
+EX:
+
+int ano = 2021
+ano = 2022
+
+final String BR = "Brasil" É FIXO NÃO MUDÁRA O SIGNIFICADO, BR SEMPRE SIGNIFICARÁ BRASIL.
+
+Regras para definição de variáveis 
+ 
+// Toda Variavél requer seu Tipo + Nome específico + valor, 
+    //valor não se aplica em todas de uma forma numérica, por exemplo boolean
+  //String meuNome = "Pedro Henrique";
+
+  //int anoFabricacao = 2022;
+   
+  //boolean verdadeiro = false;
+
+  //anoFabricacao = 2018;
+
+    // TipoRetorno + NomeobjetivoNoInfinitivo + Parametro
+   
+   //int somar (int numeroUm, int numero2)
+   
+   //String formatacarCep (long cep)
+
+Variáveis 
+Uma variável deve ser clara, sem abreviações ou definição sem sentido;
+
+Uma variável é sempre no singular, exceto quando se referir a um array ou coleção.
+
+
+Defina um idioma único para suas variáveis. Se você for declarar variáveis em inglês, defina todas em inglês. 
+
+
+
+Métodos
+Os métodos deverão ser nomeados como verbos, através de uma mistura de letras minúsculas e maiúsculas. Em princípio todas as letras que compõem o nome devem ser mantidas em minúsculo, com exceção da primeira letra de cada palavra composta, a partir da segunda palavra.
+
+Tipos variaveis 
+
+Em java as variáveis mais usadas recebe o nome de tipo primitivos, esses tipos são
+
+int, byte, short, float, double, long, boolean, char.
+
+Porém dentro deses 8 as mais utilizadas são , int e, double, boolean e char.
+
+Para definir uma constante, ela deve ter: final + tipo + nome(CAIXA ALTA) + valor.
+Precisa ter a palavra a final no início, tipo é no que ela se refere (int, float, double, char ...), CAIXA ALTA se refere a estar em maiúscula.
+
+
+Estudar:
+    TIPOS PRIMITIVOS
+    CLASSE STRING QUE REPRESENTA TEXTO NA APLICAÇÃO 
+
+Dar uma olhada também em
+	Java orientado a objetos e SpringBoot
+
+
+
+Java : Trabalhando com operadores 
+Neste código possui mais de uma execução, o que separa são os comentários.
+
+public class Operadores {
+    
+    public static void main(String[] args) {
+        int numero = 5;
+        boolean variavel = true;
+
+        //assim que invertemos o valor de uma variavel, sem estar dentro do println
+        variavel =  !variavel;
+        System.out.println(variavel);
+        //Vocẽ colocando a exclamação como prefixo, vc inverte o valor de true para false
+       // System.out.println(!variavel);
+
+        //numero++;
+        //numero + 1
+
+        //Caso vc queria imprimir a soma de um direto no comando ao 
+        //invez de defimir uma variavél em específico
+        
+        //System.out.println(numero ++);
+        //System.out.println(numero);
+
+        
+    }
+
+Operadores com função ternário
+
+  int a, b;
+
+        a = 4;
+        b = 4;
+
+        //Definindo o tipo de variavel que é resultado
+        //String resultado = "";
+        //Criando uma condição de comparação com Se e Senao
+        //if (a == b)
+        //    resultado = "verdadeiro";
+
+       // else
+        //    resultado = "falso";
+// Para transformar tudo isso em uma única linha código, usaos o ? e :
+//Onde ? significa uma condição verdadeira e o : Falso
+        String resultado = a==b ?"verdadeiro" : "falso";
+// Essa é uma expressão bool, então tem que avaliar se for "true" ou "false"
+//Essa condição não se prende somente ao tipo String
+
+        System.out.println(resultado);
+}
+
+
+
+
+Operadores com comparação do tipo, igual maior, menor e diferente
+==, > , < , !=
+
+  String nomeUm = "Pedro";
+      String nomeDois = "Pedro";
+
+      System.out.println(nomeUm == nomeDois);
+      
+      
+      
+      
+      
+      
+        int numero1 = 2;
+      int numero2 = 3;
+
+      boolean simNao = numero1 < numero2;
+        if(numero1 == numero2){//true
+            System.out.println("a nossa condição é verdadeira");
+        }
+
+      System.out.println("numeroUm é menor que  numeroDois? " + simNao);
+
+Trabalhando com comparações da tabela verdade
+
+boolean condicao = true;
+
+    boolean condicao2 = true;        
+     
+    //O termo && tem a mesma função do ++, ele verifica se ambas são verdadeiras
+    if(condicao && condicao2){
+        System.out.println("as duas condiçoes são verdadeiras");
+    }
+
+    //O termo || é um OU, no caso só precisa de um ou outro resultado verdadeiro
+    if(condicao || condicao2){
+        System.out.println("Umas das duas condiçoes é verdadeira");
+    }
+    System.out.println("Fim");
+
+
+
+
+
+Quando declaramos um método usando VOID
+É tipo de retorno do método. Este tipo de retorno significa vazio/nada, o método não dá retorno nenhum.
+Com este método, não precisamos usar o return, pois ele é vazio e não retorna nada.
+Exemplo 
+
+
+    public static void main(String[] args) {
+    //Declara idade
+        int idade;
+        idade = 15;
+        //Imprime idade
+        System.out.println(idade);
+
+
