@@ -1,4 +1,5 @@
-
+//Faça um programa que peça o nome e a Idad repetida vezes
+//O programa só se encerrará ao digitar "0", no nome
 
 import java.util.Scanner;
 
